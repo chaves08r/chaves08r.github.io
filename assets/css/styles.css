@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap');
-
 
 :root, :root[data-theme='dark']{
     --primary-color: #f0f0f0;
@@ -36,6 +35,8 @@ padding: 0;
 box-sizing: border-box;
 vertical-align: baseline;
 list-style: none;
+scrollbar-width: thin;
+scrollbar-color: var(--secondary-bg-color) transparent;
 }
 body{
     background: var(--primary-bg-color);
@@ -79,6 +80,7 @@ p{
     align-items: center;
     width: 100%;
     padding: 0.5rem 1rem;
+    z-index: 2;
 }
 .header__toggle{
     display: flex;
@@ -103,6 +105,11 @@ p{
 .menu__item{
     width: 100%;
 }
+.menu__link {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
 .menu--mobile{
     width: 100vw;
     position: fixed;
@@ -144,18 +151,20 @@ p{
 .menu--social{
     gap: 1rem;
 }
-.btn{
+.btn {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 0.625rem;
     width: 100%;
     background: transparent;
     border-radius: 3.125rem;
+    border: none;
     padding: 0.875rem 1.5rem;
     transition: ease-in-out .3s;
     cursor: pointer;
-}
+    color: var(--primary-color);
+  }
 .btn:hover{
     transform: scale(1.05);
     transition: ease-in-out .3s;
@@ -192,7 +201,7 @@ main{
     justify-content: flex-start;
     align-items: center;
     gap: 1.25rem;
-    padding: 6.25rem 1rem 2rem 1rem;
+    padding: 6.25rem 1rem 2rem;
     background: var(--secondary-bg-color);
     margin-top: -5.5rem;
     
@@ -200,6 +209,8 @@ main{
 .skills h2{
     font-size: 2rem;
     text-transform: none;
+    letter-spacing: normal;
+    text-align: start;
 }
 .skills__list{
     display: flex;
